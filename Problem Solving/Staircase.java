@@ -19,3 +19,5 @@ static void staircase(int n) {
         lineString = "";
     }
 }
+
+// Problem: https://www.hackerrank.com/challenges/staircase/problem
