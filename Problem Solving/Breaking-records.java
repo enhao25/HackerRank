@@ -20,3 +20,5 @@ static int[] breakingRecords(int[] scores) {
     }
     return new int[] {breakMax, breakMin};
 }
+
+// Problem: https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
