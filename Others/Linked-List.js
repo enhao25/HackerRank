@@ -85,6 +85,23 @@ class LinkedList {
     }
     return nodeArray;
   }
+  reverse() {
+    if (!this.head.next) {
+      return this;
+    }
+    let first = this.head;
+    this.tail = this.head;
+    let second = this.head.next;
+    while (second) {
+      let temp = second.next
+      second.next = first
+      first = second
+      second = temp
+    }
+    console.log(this.head)
+    this.head.next = null;
+    this.head = first
+  }
 }
 
 let myLinkedList = new LinkedList(10);
@@ -92,5 +109,6 @@ myLinkedList.append(5);
 myLinkedList.append(16);
 myLinkedList.prepend(1);
 myLinkedList.insert(3, 6);
-myLinkedList.remove(4)
+// myLinkedList.remove(4)
+myLinkedList.reverse();
 myLinkedList.printList();
