@@ -46,16 +46,4 @@ public class Special_Number {
 		arr = (ArrayList<Integer>) stream.boxed().collect(Collectors.toList());
 		return arr;
 	}
-	public static ArrayList<Integer> specialNumbersStreams2(int left, int right) {
-		ArrayList<Integer> arr = new ArrayList<>();
-		// code here
-		IntStream stream = IntStream.range(left, right + 1).filter(num -> {
-			IntStream digit = String.valueOf(num).chars().map(Character::getNumericValue);
-			int val = digit.reduce((x, y) -> x * y).getAsInt();
-			return val == 0 ? false : num % val == 0;
-		});
-		// Convert stream back to array list
-		arr = (ArrayList<Integer>) stream.boxed().collect(Collectors.toList());
-		return arr;
-	}
 }
